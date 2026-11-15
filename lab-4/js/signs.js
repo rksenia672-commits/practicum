@@ -1,0 +1,1 @@
+$(function() { $(document).tooltip({ items:'img.tooltip', content:function(){return $(this).attr('data-hint');} }); });
