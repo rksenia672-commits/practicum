@@ -1,0 +1,47 @@
+
+const form = document.querySelector('#newtask');
+const input = document.querySelector('#task-input');
+const tasks = document.querySelector('#tasks');
+const message = document.querySelector('#message');
+
+form.addEventListener('submit', event => {
+    event.preventDefault();
+
+    const value = input.value.trim();
+
+    if (!value) {
+        message.textContent = 'Введите описание задачи.';
+        input.focus();
+        return;
+    }
+
+    const task = document.createElement('div');
+    task.className = 'task';
+
+    const text = document.createElement('span');
+    text.textContent = value;
+
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'delete';
+
+    button.setAttribute(
+        'aria-label',
+        'Удалить задачу ' + value
+    );
+
+    button.innerHTML = '<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13M10 10v7M14 10v7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+    button.addEventListener('click', () => {
+        task.remove();
+        message.textContent = 'Задача удалена.';
+        input.focus();
+    });
+
+    task.append(text, button);
+    tasks.append(task);
+
+    input.value = '';
+    message.textContent = 'Задача добавлена.';
+    input.focus();
+});
