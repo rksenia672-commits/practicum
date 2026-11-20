@@ -1,0 +1,1019 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+
+/* ========================================
+   ОСНОВНЫЕ НАСТРОЙКИ
+======================================== */
+
+:root {
+    --cream: #f8ecd7;
+    --paper: #fff7e9;
+    --ink: #48231b;
+    --wine: #8c2e24;
+    --gold: #e7b15f;
+    --muted: #8a7160;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: Manrope, Arial, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.wrap {
+    width: min(1240px, calc(100% - 54px));
+    margin: auto;
+}
+
+
+/* ========================================
+   ГЛАВНЫЙ ЭКРАН
+======================================== */
+
+.hero {
+    height: 650px;
+    position: relative;
+    color: #fff1d8;
+    overflow: hidden;
+    background: #28151f;
+}
+
+
+/* ОБЪЕДИНЁННОЕ ИЗОБРАЖЕНИЕ */
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(40, 21, 31, .15) 0%,
+            rgba(40, 21, 31, .35) 40%,
+            rgba(40, 21, 31, .2) 100%
+        ),
+        url('../images/bold.png') center center / cover no-repeat;
+}
+
+
+/* ОТКЛЮЧАЕМ СТАРОЕ ИЗОБРАЖЕНИЕ КРЫСЫ */
+
+.hero:before {
+    content: none;
+}
+
+
+/* ДЕКОРАТИВНЫЙ РВАНЫЙ КРАЙ */
+
+.hero:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: -1px;
+    left: -2%;
+
+    width: 104%;
+    height: 105px;
+
+    background: var(--cream);
+
+    clip-path: polygon(
+        0 25%,
+        4% 33%,
+        8% 24%,
+        13% 32%,
+        18% 21%,
+        23% 28%,
+        29% 17%,
+        34% 26%,
+        40% 18%,
+        46% 28%,
+        52% 15%,
+        58% 25%,
+        64% 17%,
+        70% 26%,
+        76% 14%,
+        82% 25%,
+        88% 17%,
+        94% 27%,
+        100% 15%,
+        100% 100%,
+        0 100%
+    );
+
+    filter: drop-shadow(0 -7px 8px #160b0b55);
+}
+
+/* ========================================
+   НАВИГАЦИЯ
+======================================== */
+
+.nav {
+    height: 100px;
+    position: relative;
+    z-index: 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: linear-gradient(
+        90deg,
+        rgba(35, 15, 24, .96),
+        rgba(48, 20, 29, .82)
+    );
+
+    padding: 0 24px;
+    border-radius: 0 0 14px 14px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    color: var(--gold);
+    font: italic 30px 'DM Serif Display', Georgia, serif;
+    line-height: 1;
+}
+
+.logo-icon {
+    font-size: 38px;
+}
+
+.logo small {
+    display: block;
+    color: #f3dfc1;
+
+    font: 8px Manrope, sans-serif;
+    letter-spacing: 1.7px;
+
+    margin-top: 8px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 31px;
+    font-size: 13px;
+}
+
+.nav-links a {
+    padding: 11px 4px;
+    border-bottom: 1px solid transparent;
+    transition: .25s;
+}
+
+.nav-links a:hover,
+.nav-links a:focus,
+.nav-links .active {
+    color: var(--gold);
+    border-color: var(--gold);
+    outline: none;
+}
+
+.reserve {
+    border: 1px solid var(--gold);
+    border-radius: 30px;
+
+    padding: 13px 20px;
+    font-size: 11px;
+
+    transition: .25s;
+}
+
+.reserve:hover,
+.reserve:focus {
+    background: var(--gold);
+    color: var(--ink);
+    outline: 2px solid #fff;
+}
+
+
+/* ========================================
+   ЗАГОЛОВОК И ТЕКСТ ГЛАВНОГО ЭКРАНА
+======================================== */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    height: 440px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.hero-copy {
+    width: 510px;
+    margin-left: 110px;
+    margin-top: -10px;
+
+    text-shadow: 0 2px 12px #1a0c14;
+}
+
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-weight: 800;
+    color: #edbd72;
+}
+
+.hero h1 {
+    font: clamp(48px, 5vw, 70px) / .98 'DM Serif Display', Georgia, serif;
+    margin: 15px 0 17px;
+}
+
+.hero h1 em {
+    color: #efb75d;
+    font-weight: 400;
+}
+
+.hero-copy > p:not(.eyebrow) {
+    font: 15px / 1.7 'DM Serif Display', Georgia, serif;
+    color: #f4e4cd;
+
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   КНОПКИ
+======================================== */
+
+.gold-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 22px;
+
+    background: linear-gradient(
+        135deg,
+        #f2c779,
+        #e5a94e
+    );
+
+    color: #482319;
+
+    padding: 14px 25px;
+    border-radius: 28px;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    margin-top: 22px;
+
+    box-shadow: 0 7px 20px #1a0c1455;
+
+    transition: transform .25s, box-shadow .25s;
+}
+
+.gold-btn:hover,
+.gold-btn:focus {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px #1a0c1480;
+    outline: 2px solid #fff;
+}
+
+
+/* ========================================
+   ПОДПИСИ ГЛАВНОГО ЭКРАНА
+======================================== */
+
+.chef-caption {
+    position: absolute;
+    left: 11%;
+    bottom: 6px;
+
+    font: italic 14px 'DM Serif Display', serif;
+    color: #f3d6a7;
+
+    text-shadow: 0 2px 6px #211;
+}
+
+.hero-foot {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #e9bd77;
+    font-size: 9px;
+    letter-spacing: 2px;
+
+    padding-top: 4px;
+}
+
+
+/* ========================================
+   СЕКЦИЯ МЕНЮ
+======================================== */
+
+.menu {
+    position: relative;
+    z-index: 2;
+
+    padding: 28px 0 82px;
+
+    background: radial-gradient(
+        ellipse at 50% 0,
+        #fff8e9 0%,
+        #f8ecd7 68%
+    );
+}
+
+.menu-title {
+    text-align: center;
+}
+
+.dark {
+    color: var(--wine);
+}
+
+.menu-title h2 {
+    font: 56px 'DM Serif Display', Georgia, serif;
+    margin: 5px 0;
+    color: #48231b;
+}
+
+.menu-title h2 em {
+    color: var(--wine);
+}
+
+.menu-title > p:last-child {
+    font-size: 12px;
+    color: var(--muted);
+    margin: 0;
+}
+
+
+/* ========================================
+   КАТЕГОРИИ МЕНЮ
+======================================== */
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+
+    margin: 29px auto 40px;
+}
+
+.tabs a {
+    padding: 13px 25px;
+
+    border: 1px solid #e8cda7;
+    border-radius: 28px;
+
+    background: #fff5e6;
+
+    font: 14px 'DM Serif Display', Georgia, serif;
+
+    box-shadow: 0 3px 7px #75482a12;
+
+    transition: .25s;
+}
+
+.tabs a:hover,
+.tabs a:focus,
+.tabs .chosen {
+    background: var(--wine);
+    color: #fff1dc;
+    border-color: var(--wine);
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 17px #71302630;
+
+    outline: none;
+}
+
+
+/* ========================================
+   ЗАГОЛОВКИ КАТЕГОРИЙ
+======================================== */
+
+.group {
+    margin-bottom: 48px;
+    scroll-margin-top: 15px;
+}
+
+.group-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 23px;
+
+    margin-bottom: 22px;
+}
+
+.group-title i {
+    width: 78px;
+    height: 1px;
+
+    background: #c49355;
+
+    position: relative;
+}
+
+.group-title i:after {
+    content: "✦";
+
+    position: absolute;
+    right: -13px;
+    top: -9px;
+
+    color: #a97a3d;
+}
+
+.group-title h3 {
+    font: italic 34px 'DM Serif Display', Georgia, serif;
+    color: var(--wine);
+    margin: 0;
+}
+
+
+/* ========================================
+   КАРТОЧКИ БЛЮД
+======================================== */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 23px;
+}
+
+.dish {
+    position: relative;
+
+    background: var(--paper);
+    border: 1px solid #ead5b6;
+    border-radius: 17px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 15px #69411e0c;
+
+    transition: transform .3s, box-shadow .3s, border-color .3s;
+}
+
+.dish:before {
+    content: "";
+
+    position: absolute;
+    inset: 8px;
+
+    border: 1px solid #d8b98e;
+    border-radius: 11px;
+
+    opacity: 0;
+    z-index: 2;
+
+    pointer-events: none;
+
+    transition: opacity .3s;
+}
+
+.dish:hover,
+.dish:focus-within {
+    transform: translateY(-8px);
+
+    box-shadow: 0 18px 35px #5b321e25;
+
+    border-color: #c18b4b;
+}
+
+.dish:hover:before,
+.dish:focus-within:before {
+    opacity: 1;
+}
+
+
+/* ========================================
+   ИЗОБРАЖЕНИЯ БЛЮД
+======================================== */
+
+.photo {
+    height: 205px;
+    position: relative;
+    overflow: hidden;
+
+    background: #dfc49a;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+
+    transition: transform .5s;
+}
+
+.dish:hover .photo img {
+    transform: scale(1.1);
+}
+
+.ribbon {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+
+    background: #8b2e24;
+    color: #fff0d8;
+
+    border-radius: 20px;
+    padding: 7px 12px;
+
+    font-size: 9px;
+    letter-spacing: .5px;
+
+    box-shadow: 0 3px 9px #2111;
+}
+
+
+/* ========================================
+   ОПИСАНИЕ БЛЮД И ЦЕНЫ
+======================================== */
+
+.dish-body {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: flex-end;
+
+    padding: 16px 19px 21px;
+}
+
+.dish h4 {
+    font: 23px 'DM Serif Display', Georgia, serif;
+    margin: 0 0 6px;
+}
+
+.dish p {
+    font: 12px / 1.55 'DM Serif Display', Georgia, serif;
+    color: #816a58;
+
+    margin: 0;
+    max-width: 260px;
+}
+
+.dish strong {
+    font: 22px 'DM Serif Display', Georgia, serif;
+    color: var(--wine);
+
+    white-space: nowrap;
+
+    transition: transform .3s, color .3s;
+}
+
+.dish:hover strong {
+    color: #b17a35;
+    transform: scale(1.1);
+}
+
+.sketch {
+    position: absolute;
+    right: 17px;
+    bottom: 6px;
+
+    font-size: 27px;
+    color: #9c7952;
+    opacity: .65;
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   ЗАПАСНОЕ ОФОРМЛЕНИЕ БЛЮД
+======================================== */
+
+.food-fallback {
+    display: grid;
+    place-items: center;
+
+    background: radial-gradient(
+        circle,
+        #fff5df,
+        #d6ad7d
+    );
+}
+
+.food-fallback span {
+    font-size: 100px;
+
+    filter: drop-shadow(0 7px 5px #4a2b2440);
+
+    transition: transform .4s;
+}
+
+.dish:hover .food-fallback span {
+    transform: scale(1.16) rotate(-5deg);
+}
+
+.duck {
+    background: linear-gradient(135deg, #b87a4b, #63372a);
+}
+
+.pasta {
+    background: linear-gradient(135deg, #e4c38d, #8a603b);
+}
+
+.beef {
+    background: linear-gradient(135deg, #a76d4c, #4b2b26);
+}
+
+.tart {
+    background: linear-gradient(135deg, #e5c58c, #a66b3d);
+}
+
+.creme {
+    background: linear-gradient(135deg, #ead9a8, #b47c48);
+}
+
+.eclair {
+    background: linear-gradient(135deg, #d7b38c, #6b4232);
+}
+
+
+/* ========================================
+   НАПИТКИ
+======================================== */
+
+.drinks {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ead8b9;
+    border-radius: 16px;
+
+    padding: 28px 38px;
+    margin-top: 20px;
+}
+
+.drinks h3 {
+    font: 32px 'DM Serif Display', Georgia, serif;
+    margin: 4px 0;
+}
+
+.drinks h3 em {
+    color: var(--wine);
+}
+
+.drinks p:last-child {
+    font-size: 12px;
+    color: #715b4d;
+}
+
+.drinks > span {
+    font-size: 64px;
+    text-shadow: 4px 7px 8px #6a3e2c33;
+}
+
+
+/* ========================================
+   ИСТОРИЯ РЕСТОРАНА
+======================================== */
+
+.story {
+    background: #48251f;
+    color: #f8e9d1;
+
+    padding: 75px 0;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.story:before,
+.story:after {
+    content: "✦";
+
+    position: absolute;
+
+    color: #d0a05d;
+    opacity: .18;
+    font-size: 180px;
+}
+
+.story:before {
+    left: 5%;
+    top: -55px;
+}
+
+.story:after {
+    right: 6%;
+    bottom: -90px;
+}
+
+.story-inner {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    gap: 50px;
+    align-items: center;
+
+    max-width: 850px;
+
+    position: relative;
+    z-index: 1;
+}
+
+.stamp {
+    width: 145px;
+    height: 145px;
+
+    border: 1px solid #d6ad70;
+    border-radius: 50%;
+
+    display: grid;
+    place-content: center;
+
+    text-align: center;
+
+    color: #e5bb79;
+    font: italic 25px 'DM Serif Display', serif;
+
+    transform: rotate(-12deg);
+
+    box-shadow:
+        inset 0 0 0 7px #48251f,
+        inset 0 0 0 8px #d6ad70;
+}
+
+.story h2 {
+    font: 45px / 1.05 'DM Serif Display', Georgia, serif;
+    margin: 8px 0 15px;
+}
+
+.story h2 em {
+    color: #e5bb79;
+}
+
+.story-inner p:last-child {
+    max-width: 600px;
+
+    color: #dfcdb5;
+
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+
+/* ========================================
+   ПОДВАЛ САЙТА
+======================================== */
+
+footer {
+    background: #29191a;
+    color: #f5e6d0;
+
+    padding: 35px 0 0;
+}
+
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-inner p {
+    font-size: 11px;
+    line-height: 1.8;
+    color: #d7c2a8;
+}
+
+.footer-inner .gold-btn {
+    margin: 0;
+}
+
+.copyright {
+    text-align: center;
+
+    border-top: 1px solid #ffffff18;
+
+    margin-top: 28px;
+    padding: 15px;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #bda78e;
+}
+
+
+/* ========================================
+   АДАПТАЦИЯ ДЛЯ ПЛАНШЕТОВ
+======================================== */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .reserve {
+        display: none;
+    }
+
+    .hero-copy {
+        margin-left: 190px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ========================================
+   АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ
+======================================== */
+
+@media (max-width: 620px) {
+
+    .wrap {
+        width: calc(100% - 30px);
+    }
+
+    .hero {
+        height: 650px;
+
+        background-size: auto 70%;
+        background-position: right top;
+        background-repeat: no-repeat;
+    }
+
+    .hero:before {
+        background-size: auto 54%;
+        background-position: left bottom 65px;
+    }
+
+    .nav {
+        height: 90px;
+        padding: 0 10px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .logo-icon {
+        font-size: 28px;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 90px;
+        left: 10px;
+        right: 10px;
+
+        justify-content: space-between;
+        gap: 5px;
+
+        font-size: 10px;
+    }
+
+    .hero-content {
+        height: 480px;
+        align-items: flex-start;
+        padding-top: 125px;
+    }
+
+    .hero-copy {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 440px;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .hero-copy > p:not(.eyebrow) {
+        font-size: 13px;
+        max-width: 330px;
+    }
+
+    .chef-caption {
+        display: none;
+    }
+
+    .hero-foot {
+        font-size: 7px;
+    }
+
+    .menu {
+        padding-top: 22px;
+    }
+
+    .menu-title h2 {
+        font-size: 43px;
+    }
+
+    .tabs {
+        gap: 7px;
+    }
+
+    .tabs a {
+        font-size: 11px;
+        padding: 10px 13px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .photo {
+        height: 195px;
+    }
+
+    .group-title h3 {
+        font-size: 29px;
+    }
+
+    .drinks {
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .drinks h3 {
+        font-size: 24px;
+    }
+
+    .drinks p:last-child {
+        line-height: 1.8;
+    }
+
+    .story-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .stamp {
+        margin: auto;
+        width: 115px;
+        height: 115px;
+        font-size: 20px;
+    }
+
+    .story h2 {
+        font-size: 36px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-inner .gold-btn {
+        margin-top: 8px;
+    }
+}
+
+
+/* ========================================
+   УМЕНЬШЕНИЕ АНИМАЦИИ
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *:before,
+    *:after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+}
+.drinks-image {
+    width: 320px;
+    height: 210px;
+    object-fit: contain;
+}

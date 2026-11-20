@@ -1,1 +1,702 @@
 
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Le Petit Chef — меню ресторана</title>
+
+    <!-- Подключение шрифтов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Подключение CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- ========================================
+         ГЛАВНЫЙ ЭКРАН
+    ======================================== -->
+
+    <header class="hero" id="top">
+
+        <div class="hero-bg"></div>
+
+        <!-- НАВИГАЦИЯ -->
+        <nav class="nav wrap">
+
+            <a class="logo" href="#top">
+
+                <span class="logo-icon">♧</span>
+
+                <span>
+                    Le Petit Chef
+                    <small>РЕСТОРАН ФРАНЦУЗСКОЙ КУХНИ</small>
+                </span>
+
+            </a>
+
+
+            <div class="nav-links">
+
+                <a href="#top">Главная</a>
+
+                <a class="active" href="#menu">Меню</a>
+
+                <a href="#story">О ресторане</a>
+
+                <a href="#contacts">Контакты</a>
+
+            </div>
+
+
+            <a class="reserve" href="#contacts">
+                ♜ &nbsp;Забронировать столик
+            </a>
+
+        </nav>
+
+
+        <!-- ТЕКСТ ГЛАВНОГО ЭКРАНА -->
+        <div class="hero-content wrap">
+
+            <div class="hero-copy">
+
+                <p class="eyebrow">
+                    PETIT RESTAURANT · PARIS
+                </p>
+
+                <h1>
+                    Маленькая кухня.<br>
+                    <em>Большое волшебство.</em>
+                </h1>
+
+                <p>
+                    Французская классика, душевная атмосфера
+                    и немного кулинарного волшебства в каждом блюде.
+                </p>
+
+                <a class="gold-btn" href="#menu">
+                    Открыть меню
+                    <b>↘</b>
+                </a>
+
+            </div>
+
+
+            <div class="chef-caption">
+                «Готовить может каждый!»
+            </div>
+
+        </div>
+
+
+        <!-- ПОДПИСИ ВНИЗУ ГЛАВНОГО ЭКРАНА -->
+        <div class="hero-foot wrap">
+
+            <span>
+                ✦ СОЗДАНО С ЛЮБОВЬЮ
+            </span>
+
+            <span>
+                PARIS · EST. 2026
+            </span>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+        <!-- ========================================
+             МЕНЮ РЕСТОРАНА
+        ======================================== -->
+
+        <section class="menu wrap" id="menu">
+
+
+            <!-- ЗАГОЛОВОК МЕНЮ -->
+            <div class="menu-title">
+
+                <p class="eyebrow dark">
+                    NOTRE MENU
+                </p>
+
+                <h2>
+                    Вкусные <em>истории</em>
+                </h2>
+
+                <p>
+                    Выбирайте то, что сегодня подсказывает аппетит.
+                </p>
+
+            </div>
+
+
+
+            <!-- НАВИГАЦИЯ ПО КАТЕГОРИЯМ -->
+            <div class="tabs">
+
+                <a class="chosen" href="#starters">
+                    ♧ &nbsp;Закуски
+                </a>
+
+                <a href="#mains">
+                    ♜ &nbsp;Основные блюда
+                </a>
+
+                <a href="#desserts">
+                    ♧ &nbsp;Десерты
+                </a>
+
+                <a href="#drinks">
+                    ♧ &nbsp;Напитки
+                </a>
+
+            </div>
+
+
+
+            <!-- ========================================
+                 КАТЕГОРИЯ: ЗАКУСКИ
+            ======================================== -->
+
+            <section class="group" id="starters">
+
+                <div class="group-title">
+
+                    <i></i>
+
+                    <h3>Закуски</h3>
+
+                    <i></i>
+
+                </div>
+
+
+                <div class="cards">
+
+
+                    <!-- РАТАТУЙ -->
+                    <article class="dish">
+
+                        <div class="photo">
+
+                            <img
+                                src="images/ratatouille.jpg"
+                                alt="Рататуй по-провански"
+                            >
+
+                            <span class="ribbon">
+                                Хит шефа
+                            </span>
+
+                        </div>
+
+
+                        <div class="dish-body">
+
+                            <div>
+
+                                <h4>Рататуй</h4>
+
+                                <p>
+                                    Традиционное овощное блюдо Прованса
+                                    с томатным соусом и тимьяном.
+                                </p>
+
+                            </div>
+
+                            <strong>520 ₽</strong>
+
+                        </div>
+
+
+                        <span class="sketch">✿</span>
+
+                    </article>
+
+
+
+                    <!-- БРУСКЕТТА -->
+                    <article class="dish">
+
+                        <div class="photo">
+
+                            <img
+                                src="images/bruschetta.jpg"
+                                alt="Брускетта с томатами"
+                            >
+
+                        </div>
+
+
+                        <div class="dish-body">
+
+                            <div>
+
+                                <h4>Брускетта</h4>
+
+                                <p>
+                                    Хрустящий багет с томатами,
+                                    базиликом и оливковым маслом.
+                                </p>
+
+                            </div>
+
+                            <strong>380 ₽</strong>
+
+                        </div>
+
+
+                        <span class="sketch">❧</span>
+
+                    </article>
+
+
+
+                    <!-- ЛУКОВЫЙ СУП -->
+                    <article class="dish">
+
+                        <div class="photo">
+
+                            <img
+                                src="images/onion-soup.jpg"
+                                alt="Французский луковый суп"
+                            >
+
+                            <span class="ribbon">
+                                Классика
+                            </span>
+
+                        </div>
+
+
+                        <div class="dish-body">
+
+                            <div>
+
+                                <h4>Луковый суп</h4>
+
+                                <p>
+                                    Классический французский суп
+                                    с сырной корочкой.
+                                </p>
+
+                            </div>
+
+                            <strong>490 ₽</strong>
+
+                        </div>
+
+
+                        <span class="sketch">♧</span>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ========================================
+                 КАТЕГОРИЯ: ОСНОВНЫЕ БЛЮДА
+            ======================================== -->
+
+            <section class="group" id="mains">
+
+                <div class="group-title">
+
+                    <i></i>
+
+                    <h3>Основные блюда</h3>
+
+                    <i></i>
+
+                </div>
+
+
+                <div class="cards">
+
+
+                    <!-- УТИНАЯ ГРУДКА -->
+                    <article class="dish">
+
+                        <div class="photo">
+
+                            <img
+                                src="images/duck_breast.jpg"
+                                alt="Утиная грудка"
+                            >
+
+                        </div>
+
+
+                        <div class="dish-body">
+
+                            <div>
+
+                                <h4>Утиная грудка</h4>
+
+                                <p>
+                                    Филе утки в апельсиновом соусе
+                                    с ароматными травами.
+                                </p>
+
+                            </div>
+
+                            <strong>890 ₽</strong>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- ПАСТА С ГРИБАМИ -->
+                    <article class="dish">
+
+                        <div class="photo">
+
+                            <img
+                                src="images/mushroom_pasta.jpg"
+                                alt="Паста с грибами"
+                            >
+
+                        </div>
+
+
+                        <div class="dish-body">
+
+                            <div>
+
+                                <h4>Паста с грибами</h4>
+
+                                <p>
+                                    Домашняя паста в сливочном соусе
+                                    с лесными грибами.
+                                </p>
+
+                            </div>
+
+                            <strong>650 ₽</strong>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- БЁФ БУРГИНЬОН -->
+                    <article class="dish">
+
+                        <div class="photo">
+
+                            <img
+                                src="images/beef_bourguignon.jpg"
+                                alt="Бёф бургиньон"
+                            >
+
+                        </div>
+
+
+                        <div class="dish-body">
+
+                            <div>
+
+                                <h4>Бёф бургиньон</h4>
+
+                                <p>
+                                    Говядина, томлённая в красном вине
+                                    с пряными травами.
+                                </p>
+
+                            </div>
+
+                            <strong>760 ₽</strong>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ========================================
+                 КАТЕГОРИЯ: ДЕСЕРТЫ
+            ======================================== -->
+
+            <section class="group" id="desserts">
+
+                <div class="group-title">
+
+                    <i></i>
+
+                    <h3>Десерты</h3>
+
+                    <i></i>
+
+                </div>
+
+
+                <div class="cards">
+
+
+                    <!-- ТАРТ ТАТЕН -->
+                    <article class="dish">
+
+                        <div class="photo">
+
+                            <img
+                                src="images/tarte_tatin.jpg"
+                                alt="Тарт татен"
+                            >
+
+                        </div>
+
+
+                        <div class="dish-body">
+
+                            <div>
+
+                                <h4>Тарт татен</h4>
+
+                                <p>
+                                    Карамельные яблоки,
+                                    хрустящее тесто и ванильный крем.
+                                </p>
+
+                            </div>
+
+                            <strong>420 ₽</strong>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- КРЕМ-БРЮЛЕ -->
+                    <article class="dish">
+
+                        <div class="photo">
+
+                            <img
+                                src="images/creme_brulee.jpg"
+                                alt="Крем-брюле"
+                            >
+
+                        </div>
+
+
+                        <div class="dish-body">
+
+                            <div>
+
+                                <h4>Крем-брюле</h4>
+
+                                <p>
+                                    Нежный сливочный крем
+                                    под хрустящей карамельной корочкой.
+                                </p>
+
+                            </div>
+
+                            <strong>390 ₽</strong>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- ЭКЛЕРЫ -->
+                    <article class="dish">
+
+                        <div class="photo">
+
+                            <img
+                                src="images/eclairs.jpg"
+                                alt="Эклеры с шоколадным кремом"
+                            >
+
+                        </div>
+
+
+                        <div class="dish-body">
+
+                            <div>
+
+                                <h4>Эклеры maison</h4>
+
+                                <p>
+                                    Заварное тесто с шоколадным кремом
+                                    ручной работы.
+                                </p>
+
+                            </div>
+
+                            <strong>350 ₽</strong>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ========================================
+                 КАТЕГОРИЯ: НАПИТКИ
+            ======================================== -->
+
+            <section class="drinks" id="drinks">
+
+                <div>
+
+                    <p class="eyebrow dark">
+                        À BOIRE
+                    </p>
+
+                    <h3>
+                        Что-нибудь <em>освежающее?</em>
+                    </h3>
+
+                    <p>
+                        Домашний лимонад · 290 ₽
+                        &nbsp; | &nbsp;
+                        Чай с лавандой · 250 ₽
+                        &nbsp; | &nbsp;
+                        Кофе по-французски · 220 ₽
+                    </p>
+
+                </div>
+
+
+               <img
+    src="images/drinks-illustration.png"
+    alt="Напитки ресторана"
+    class="drinks-image"
+               >
+            </section>
+
+
+        </section>
+
+
+
+        <!-- ========================================
+             ИСТОРИЯ РЕСТОРАНА
+        ======================================== -->
+
+        <section class="story" id="story">
+
+            <div class="story-inner wrap">
+
+
+                <div class="stamp">
+
+                    BON<br>
+                    APPÉTIT
+
+                </div>
+
+
+                <div>
+
+                    <p class="eyebrow">
+                        UNE PETITE HISTOIRE
+                    </p>
+
+
+                    <h2>
+                        Большой вкус<br>
+                        <em>начинается с любви.</em>
+                    </h2>
+
+
+                    <p>
+                        Мы верим, что хорошая кухня не знает границ.
+                        Каждый ингредиент важен, каждый рецепт готовится
+                        с душой, а за плитой всегда найдётся место
+                        маленькому кулинарному чуду.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ========================================
+         ПОДВАЛ САЙТА И КОНТАКТЫ
+    ======================================== -->
+
+    <footer id="contacts">
+
+        <div class="footer-inner wrap">
+
+
+            <a class="logo" href="#top">
+
+                ♧
+
+                <span>
+                    Le Petit Chef
+                    <small>РЕСТОРАН ФРАНЦУЗСКОЙ КУХНИ</small>
+                </span>
+
+            </a>
+
+
+            <p>
+                Йошкар-Ола · ул. Архангельская слобода, 8<br>
+                Ежедневно: 12:00–23:00
+            </p>
+
+
+            <a class="gold-btn" href="tel:+78005553535">
+                +7 (800) 555-35-35
+            </a>
+
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 LE PETIT CHEF · BON APPÉTIT!
+
+        </div>
+
+    </footer>
+
+
+</body>
+</html>
